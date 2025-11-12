@@ -1,0 +1,28 @@
+# --- Core Chess Logic & Data Handling ---
+# The standard, highly-featured chess library for Python.
+# Essential for parsing PGN, generating legal moves, checking game termination, etc.
+python-chess==1.0.0
+# Note: You can also look into 'bulletchess' if you hit performance bottlenecks 
+# during large-scale PGN processing, but 'python-chess' is the reliable standard.
+
+# --- Deep Learning Framework (PyTorch) ---
+# PyTorch is recommended for its flexibility and dynamic graph, which aids in
+# building and debugging custom Transformer architectures and MCTS logic.
+torch==2.3.0
+torchvision==0.18.0
+torchaudio==2.3.0
+
+# --- Transformer Architecture (Optional but Highly Recommended) ---
+# While you can build the Transformer from scratch using 'torch.nn.TransformerEncoderLayer',
+# this library provides robust, pre-built components and utilities (like attention layers).
+# If you plan to stick purely to a custom Encoder stack, you may skip this,
+# but it simplifies advanced Transformer components.
+# transformers==4.42.0
+
+# --- Scientific Computing & Utilities ---
+# The foundation of all numerical computing in Python (for tensors, arrays, etc.).
+numpy==1.26.4
+# Used for efficient array/data handling, especially when working with large PGN datasets.
+pandas==2.2.2
+# Essential for plotting training loss, policy accuracy, and Elo rating progression.
+matplotlib==3.8.4
