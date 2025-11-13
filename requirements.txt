@@ -26,3 +26,4 @@ numpy==1.26.4
 pandas==2.2.2
 # Essential for plotting training loss, policy accuracy, and Elo rating progression.
 matplotlib==3.8.4
+scikit-learn==1.5.0
