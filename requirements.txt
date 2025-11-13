@@ -17,7 +17,7 @@ torchaudio==2.3.0
 # this library provides robust, pre-built components and utilities (like attention layers).
 # If you plan to stick purely to a custom Encoder stack, you may skip this,
 # but it simplifies advanced Transformer components.
-# transformers==4.42.0
+transformers==4.42.0
 
 # --- Scientific Computing & Utilities ---
 # The foundation of all numerical computing in Python (for tensors, arrays, etc.).
