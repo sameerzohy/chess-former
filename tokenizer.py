@@ -30,7 +30,7 @@ tokenizer.train(
 if not os.path.exists(TOKENIZER_OUTPUT_DIR):
     os.makedirs(TOKENIZER_OUTPUT_DIR)
 
-tokenizer.save_model(TOKENIZER_OUTPUT_DIR)
+tokenizer.save(os.path.join(TOKENIZER_OUTPUT_DIR, "tokenizer.json"))
 
 print(f"Training completed and the tokenizer output is saved in the {TOKENIZER_OUTPUT_DIR}")
 print(f"Final Vocabulary size: {tokenizer.get_vocab_size()}")

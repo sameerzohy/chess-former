@@ -1,4 +1,4 @@
-from transformers import BertConfig, BertForMaskedLM, Trainer, TrainingArgument, DataCollatorForLanguageModeling
+from transformers import BertConfig, BertForMaskedLM, Trainer, TrainingArguments, DataCollatorForLanguageModeling
 from tokenizers import BertWordPieceTokenizer
 from transformers import PreTrainedTokenizerFast 
 import os
@@ -13,12 +13,12 @@ TEST_PATH = os.path.join(CURRENT_DIR, "..", TEST_FILE_NAME)
 
 
 tokenizer = PreTrainedTokenizerFast(
-    tokenizer_file = os.path.join(TOKENIZER_OUTPUT_DIR, "vocab.txt"), 
+    tokenizer_file = os.path.join(TOKENIZER_OUTPUT_DIR, "tokenizer.json"), 
     unk_token = "[UNK]", 
     sep_token = "[SEP]", 
     pad_token = "[PAD]", 
     cls_token = "[CLS]", 
-    msk_token = "[MASK]", 
+    mask_token = "[MASK]", 
     additional_special_token = ["[MOVESEP]"]
 )
 
@@ -29,6 +29,7 @@ config = BertConfig(
     num_attention_heads = 12, 
     intermediate_size = 3072, 
     max_position_embeddings = 512,
+    model_max_length = 512,
     #tokenizer id's
     pad_token_id = tokenizer.pad_token_id, 
     mask_token_id = tokenizer.mask_token_id, 
